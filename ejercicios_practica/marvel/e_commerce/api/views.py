@@ -228,3 +228,19 @@ class GetOneMarvelComicAPIView(RetrieveAPIView):
 
 
 # TODO: Class API Views for User and WishList
+
+class UserListAPIView(ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class GetOneUserAPIView(RetrieveAPIView):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+    lookup_field = 'username'
+
+class UserListAPIView(ListCreateAPIView):
+    queryset = WishList.objects.all()
+    serializer_class = WishListSerializer
+
+
+# TODO: Class API Views for User and WishList

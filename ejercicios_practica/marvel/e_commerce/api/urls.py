@@ -32,4 +32,3 @@ urlpatterns = [
     # TODO: Wish-list Class API View.
     path('wish/list-create', WishListAPIView.as_view(), name = "wishlist_class_api_view")
 ]
-]
